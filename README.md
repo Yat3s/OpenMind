@@ -1,0 +1,2 @@
+# OpenMind
+A imooc project.
