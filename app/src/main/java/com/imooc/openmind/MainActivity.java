@@ -1,13 +1,42 @@
 package com.imooc.openmind;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import com.imooc.openmind.base.BaseActivity;
+import com.imooc.openmind.network.RestClient;
 
-public class MainActivity extends AppCompatActivity {
+import rx.Subscriber;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
+
+public class MainActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected int getContentLayoutResId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void init() {
+
+        RestClient.getInstance().getAPIService()
+                .getFeed("key")
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<String>() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onNext(String s) {
+
+                    }
+                });
+
     }
 }
