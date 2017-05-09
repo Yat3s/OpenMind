@@ -10,17 +10,22 @@ import android.widget.Toast;
  * Email: hawkoyates@gmail.com
  * GitHub: https://github.com/yat3s
  */
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity<P extends BasePresenter> extends AppCompatActivity {
 
     protected abstract int getContentLayoutResId();
 
     protected abstract void init();
+
+    protected P mPresenter;
+
+    protected abstract P providePresenter();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getContentLayoutResId());
 
+        mPresenter = providePresenter();
         init();
     }
 
@@ -28,5 +33,11 @@ public abstract class BaseActivity extends AppCompatActivity {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mPresenter != null) {
+            mPresenter.unsubscribe();
+        }
+    }
 }

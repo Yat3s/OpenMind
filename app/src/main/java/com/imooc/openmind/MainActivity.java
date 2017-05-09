@@ -1,7 +1,11 @@
 package com.imooc.openmind;
 
+import android.content.Intent;
+
 import com.imooc.openmind.base.BaseActivity;
+import com.imooc.openmind.base.BasePresenter;
 import com.imooc.openmind.network.RestClient;
+import com.imooc.openmind.user.AuthActivity;
 
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
@@ -16,6 +20,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void init() {
+        startActivity(new Intent(this, AuthActivity.class));
 
         RestClient.getInstance().getAPIService()
                 .getFeed("key")
@@ -38,5 +43,10 @@ public class MainActivity extends BaseActivity {
                     }
                 });
 
+    }
+
+    @Override
+    protected BasePresenter providePresenter() {
+        return null;
     }
 }
