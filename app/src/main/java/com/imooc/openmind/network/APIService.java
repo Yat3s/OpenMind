@@ -1,6 +1,7 @@
 package com.imooc.openmind.network;
 
 import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
 import rx.Observable;
 
@@ -11,6 +12,7 @@ import rx.Observable;
  */
 public interface APIService {
 
+    @FormUrlEncoded
     @POST("/api/baidu/com")
     Observable<String> getFeed(@Field("key") String key);
 

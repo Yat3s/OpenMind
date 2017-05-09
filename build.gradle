@@ -23,7 +23,7 @@ task clean(type: Delete) {
 }
 
 ext {
-    compileSdkVersion = 24
+    compileSdkVersion = 25
     buildToolsVersion = "25.0.2"
     applicationId = "com.imooc.openmind"
     minSdkVersion = 15
