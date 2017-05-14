@@ -28,6 +28,7 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     compile 'com.yat3s.library:baseadapter:0.1.1'
+    compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2'
 
     // Protocol
     compile 'com.squareup.okhttp3:okhttp:3.6.0'

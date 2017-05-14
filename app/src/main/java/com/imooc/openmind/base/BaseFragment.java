@@ -18,6 +18,7 @@ public abstract class BaseFragment extends Fragment {
     protected abstract int getContentLayoutResId();
 
     protected abstract void init(View view);
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

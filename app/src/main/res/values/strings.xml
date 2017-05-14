@@ -5,4 +5,7 @@
     <string name="auth_get_verify_code">获取验证码</string>
     <string name="auth_auth">登录/注册</string>
     <string name="auth_slogan">- 移动新闻演播室 -</string>
+    <string name="auth_sns_platform_name">社交平台</string>
+    <string name="auth_wechat">微信登录</string>
+    <string name="auth_weibo">微博登录</string>
 </resources>
