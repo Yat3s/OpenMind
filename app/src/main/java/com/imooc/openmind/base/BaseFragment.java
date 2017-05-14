@@ -13,16 +13,22 @@ import android.widget.Toast;
  * Email: hawkoyates@gmail.com
  * GitHub: https://github.com/yat3s
  */
-public abstract class BaseFragment extends Fragment {
+public abstract class BaseFragment<P extends BasePresenter> extends Fragment {
+
+    protected P mPresenter;
 
     protected abstract int getContentLayoutResId();
 
     protected abstract void init(View view);
 
+    protected abstract P providePresenter();
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(getContentLayoutResId(), container, false);
+        mPresenter = providePresenter();
+
         init(rootView);
         return rootView;
     }

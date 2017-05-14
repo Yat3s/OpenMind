@@ -1,12 +1,18 @@
 package com.imooc.openmind.network;
 
+import com.imooc.openmind.base.BaseData;
+import com.imooc.openmind.topic.TopicModel;
 import com.imooc.openmind.user.AuthRequestBody;
 import com.imooc.openmind.user.UserModel;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import retrofit2.http.Body;
-import retrofit2.http.Field;
-import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.QueryMap;
 import rx.Observable;
 
 /**
@@ -16,14 +22,12 @@ import rx.Observable;
  */
 public interface APIService {
 
-    @FormUrlEncoded
-    @POST("/api/baidu/com")
-    Observable<String> getFeed(@Field("key") String key);
-
-
     @POST("/auth/register/smsverifycode")
     Observable<String> retrieveVerifyCode(@Body AuthRequestBody body);
 
     @POST("/auth/signin/userpass")
     Observable<UserModel> authWithPhone(@Body AuthRequestBody body);
+
+    @GET(API.API_FEED)
+    Observable<BaseData<List<TopicModel>>> retrieveFeed(@QueryMap Map<String, Object> paramMap);
 }

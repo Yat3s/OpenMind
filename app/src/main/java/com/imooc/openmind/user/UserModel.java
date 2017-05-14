@@ -18,4 +18,16 @@ public class UserModel {
     public String expiresOn;
 
     public String id;
+
+    public String nickname;
+
+    private String avatar;
+
+    public String vinfo;
+
+    public String info;
+
+    public String getAvatarURL() {
+        return avatar + "?imageView2/3/w/600/h/600/format/webp";
+    }
 }

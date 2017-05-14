@@ -11,5 +11,7 @@
     <dimen name="text_size_large">22sp</dimen>
     <dimen name="text_size_display">34sp</dimen>
     <dimen name="text_size_display_x">46sp</dimen>
+    <dimen name="NavigationTabBarSize">50dp</dimen>
+    <dimen name="image_height">256dp</dimen>
 
 </resources>

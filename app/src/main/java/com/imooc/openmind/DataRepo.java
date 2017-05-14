@@ -1,9 +1,14 @@
 package com.imooc.openmind;
 
 
+import com.imooc.openmind.base.BaseData;
 import com.imooc.openmind.network.RestClient;
+import com.imooc.openmind.topic.TopicModel;
 import com.imooc.openmind.user.AuthRequestBody;
 import com.imooc.openmind.user.UserModel;
+
+import java.util.List;
+import java.util.Map;
 
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
@@ -28,6 +33,14 @@ public class DataRepo {
         return RestClient.getInstance()
                 .getAPIService()
                 .authWithPhone(body)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    public Observable<BaseData<List<TopicModel>>> retrieveFeed(Map<String, Object> param) {
+        return RestClient.getInstance()
+                .getAPIService()
+                .retrieveFeed(param)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
     }

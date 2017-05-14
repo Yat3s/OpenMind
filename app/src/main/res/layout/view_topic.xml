@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_topic_image"/>
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/image_height"
+        android:background="@color/md_yellow_500"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/host_layout"
+            android:layout_width="108dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="12dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:id="@+id/host_nickname_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Sway"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/host_intro_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="时尚达人、陆梦萍"
+                android:textColor="@color/text_grey"
+                android:textSize="@dimen/text_size_micro"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            android:paddingTop="12dp">
+
+            <TextView
+                android:id="@+id/abstract_prompt_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[ 本场看点 ]"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_small"/>
+
+            <TextView
+                android:id="@+id/abstract_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxLines="3"
+                android:paddingTop="12dp"
+                android:text="NBA总决赛来到关键的第五场。NBA总决赛来到关键的第五场NBA总决赛来到关键的第五场赛场无情终有的情NBA总决赛来到关键的第五……"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/action_left_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/action_left_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:text="{fa-heart}"
+                android:textColor="@color/black"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:id="@+id/action_left_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="喜欢"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/action_right_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="32dp"
+                android:layout_height="32dp">
+
+                <TextView
+                    android:id="@+id/share_icon"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:id="@+id/join_icon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:gravity="center"
+                    android:text="{fa-microphone}"
+                    android:textColor="@color/black"
+                    android:textSize="28sp"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/action_right_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="上台"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="244dp">
+
+        <ImageView
+            android:id="@+id/avatar_iv"
+            android:layout_width="72dp"
+            android:layout_height="72dp"/>
+
+        <TextView
+            android:id="@+id/host_identifier_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="6dp"
+            android:text="特邀嘉宾"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_micro"/>
+
+    </FrameLayout>
+
+</FrameLayout>
