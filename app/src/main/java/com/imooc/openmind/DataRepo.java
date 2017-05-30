@@ -4,6 +4,7 @@ package com.imooc.openmind;
 import com.imooc.openmind.base.BaseData;
 import com.imooc.openmind.network.RestClient;
 import com.imooc.openmind.topic.TopicModel;
+import com.imooc.openmind.topicdetail.TopicDetailModel;
 import com.imooc.openmind.user.AuthRequestBody;
 import com.imooc.openmind.user.UserModel;
 
@@ -41,6 +42,14 @@ public class DataRepo {
         return RestClient.getInstance()
                 .getAPIService()
                 .retrieveFeed(param)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    public Observable<TopicDetailModel> retrieveTopicDetail(String topicId) {
+        return RestClient.getInstance()
+                .getAPIService()
+                .retrieveTopicDetail(topicId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
     }

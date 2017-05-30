@@ -23,6 +23,8 @@
         <activity
             android:name=".user.AuthActivity"
             android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:name=".topicdetail.TopicDetailActivity"/>
     </application>
 
 </manifest>

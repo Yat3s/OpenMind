@@ -8,4 +8,6 @@ package com.imooc.openmind.network;
 public class API {
 
     public static final String API_FEED = "/feeds?span=50";
+
+    public static final String API_TOPIC_DETAIL = "/topics/{topic_id}";
 }

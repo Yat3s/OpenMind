@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 
+import com.imooc.openmind.App;
 import com.imooc.openmind.R;
 import com.imooc.openmind.base.BaseData;
 import com.imooc.openmind.base.BaseFragment;
@@ -59,7 +60,7 @@ public class FeedFragment extends BaseFragment<FeedPresenter> implements FeedVie
         mFeedAdapter.setOnItemClickListener(new BaseAdapter.OnItemClickListener<TopicModel>() {
             @Override
             public void onClick(View view, TopicModel item, int position) {
-                // TODO: 14/05/2017 JUMP to topic detail.
+                App.startTopicDetailActivity(getActivity(), item.id);
             }
         });
 

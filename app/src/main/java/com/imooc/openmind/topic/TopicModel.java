@@ -29,6 +29,13 @@ public class TopicModel {
 
     public List<String> tags;
 
+    public String getTag() {
+        if (null == tags || tags.size() <= 0) {
+            return null;
+        }
+        return "#" + tags.get(0) + "#";
+    }
+
     public String getImageURL() {
         return img + "?imageView2/3/w/1080/h/800/format/webp";
     }
