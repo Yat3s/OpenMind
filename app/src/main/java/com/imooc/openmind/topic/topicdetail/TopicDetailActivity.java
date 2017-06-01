@@ -1,7 +1,5 @@
-package com.imooc.openmind.topicdetail;
+package com.imooc.openmind.topic.topicdetail;
 
-import android.os.Bundle;
-import android.support.design.widget.AppBarLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;

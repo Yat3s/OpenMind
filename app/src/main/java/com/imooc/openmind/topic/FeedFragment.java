@@ -60,7 +60,7 @@ public class FeedFragment extends BaseFragment<FeedPresenter> implements FeedVie
         mFeedAdapter.setOnItemClickListener(new BaseAdapter.OnItemClickListener<TopicModel>() {
             @Override
             public void onClick(View view, TopicModel item, int position) {
-                App.startTopicDetailActivity(getActivity(), item.id);
+                App.startTopicStageActivity(getActivity(), item.id);
             }
         });
 

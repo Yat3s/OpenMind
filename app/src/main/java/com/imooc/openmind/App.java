@@ -4,7 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 
-import com.imooc.openmind.topicdetail.TopicDetailActivity;
+import com.imooc.openmind.topic.topicdetail.TopicDetailActivity;
+import com.imooc.openmind.topic.topicstage.TopicStageActivity;
 import com.joanzapata.iconify.Iconify;
 import com.joanzapata.iconify.fonts.FontAwesomeModule;
 
@@ -24,6 +25,12 @@ public class App extends Application {
 
     public static void startTopicDetailActivity(Context context, String topicId) {
         Intent intent = new Intent(context, TopicDetailActivity.class);
+        intent.putExtra(TopicDetailActivity.EXTRA_TOPIC_ID, topicId);
+        context.startActivity(intent);
+    }
+
+    public static void startTopicStageActivity(Context context, String topicId) {
+        Intent intent = new Intent(context, TopicStageActivity.class);
         intent.putExtra(TopicDetailActivity.EXTRA_TOPIC_ID, topicId);
         context.startActivity(intent);
     }

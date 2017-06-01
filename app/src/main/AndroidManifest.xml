@@ -24,7 +24,9 @@
             android:name=".user.AuthActivity"
             android:windowSoftInputMode="adjustResize|stateHidden"/>
         <activity
-            android:name=".topicdetail.TopicDetailActivity"/>
+            android:name=".topic.topicdetail.TopicDetailActivity"/>
+        <activity
+            android:name=".topic.topicstage.TopicStageActivity"/>
     </application>
 
 </manifest>

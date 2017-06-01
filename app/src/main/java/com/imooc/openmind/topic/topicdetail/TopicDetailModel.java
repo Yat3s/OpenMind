@@ -1,4 +1,4 @@
-package com.imooc.openmind.topicdetail;
+package com.imooc.openmind.topic.topicdetail;
 
 import com.imooc.openmind.topic.TopicModel;
 import com.imooc.openmind.user.UserModel;

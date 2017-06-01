@@ -1,6 +1,4 @@
-package com.imooc.openmind.topicdetail;
-
-import com.imooc.openmind.topic.TopicModel;
+package com.imooc.openmind.topic.topicdetail;
 
 /**
  * Created by Yat3s on 30/05/2017.

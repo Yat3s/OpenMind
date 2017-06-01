@@ -2,7 +2,7 @@ package com.imooc.openmind.network;
 
 import com.imooc.openmind.base.BaseData;
 import com.imooc.openmind.topic.TopicModel;
-import com.imooc.openmind.topicdetail.TopicDetailModel;
+import com.imooc.openmind.topic.topicdetail.TopicDetailModel;
 import com.imooc.openmind.user.AuthRequestBody;
 import com.imooc.openmind.user.UserModel;
 
